@@ -21,34 +21,34 @@ int main()
 
     calcPtr->welcome(); // Welcome message for simple calc
 
-    /// Set precision for all uses of cout
-    /// Shows up to 15 places
+    // Set precision for all uses of cout
+    // Shows up to 15 places
     cout << setprecision(15);
 
-    /// Take in input and loop
+    // Take in input and loop
     string input;
     while (cin >> input && input != "exit")
     {
-        /// Input to switch mode
+        // Input to switch mode
         if (input == "switch")
         {
             if (sciActive)
             {
-                /// Set pointer to the simple calc object
+                // Set pointer to the simple calc object
                 calcPtr = &calc;
                 sciActive = false;
                 cout << "\nSimple Calculator Activated";
             }
             else
             {
-                /// Set pointer to scientific calc object
+                // Set pointer to scientific calc object
                 calcPtr = &sci;
                 sciActive = true;
                 cout << "\nScientific Calculator Activated";
             }
         }
 
-        /// Call virtual functions from base class pointer to get polymorphic
+        // Call virtual functions from base class pointer to get polymorphic
         calcPtr->parseOperation(input);
         calcPtr->welcome();
     }
