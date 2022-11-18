@@ -9,14 +9,14 @@
 class Scientific : public Calculator
 {
 public:
-    Scientific();                    /// Constructor
-    virtual ~Scientific() = default; /// Virtual destructor to prevent delete errors
+    Scientific();                    // Constructor
+    virtual ~Scientific() = default; // Virtual destructor to prevent delete errors
 
-    virtual void welcome() const override; /// Options message
+    virtual void welcome() const override; // Options message
 
-    virtual void parseOperation(const std::string &input) override; /// Parse operation input and call correct member func
+    virtual void parseOperation(const std::string &input) override; // Parse operation input and call correct member func
 
-    /// Operations not in simple calc
+    // Operations not in simple calc
     void sin();
     void cos();
     void tan();
