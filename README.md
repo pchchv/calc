@@ -1,2 +1,1 @@
-# calc
-Simple command line calculator
+# Command Line Calculator
